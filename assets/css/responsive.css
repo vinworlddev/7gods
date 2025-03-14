@@ -1,0 +1,880 @@
+.nav-container {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+}
+
+#nav-container.nav-container-scrolled,
+#nav-container.nav-container-inner {
+    background: rgba(6, 12, 34, 0.98);
+    height: 55px;
+}
+
+.nav-container .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+.nav-container .logo img {
+    width: 5rem;
+    animation: swing 5s ease-in-out infinite;
+    transform-origin: center top;
+    /* margin-right: 8px; */
+}
+
+.nav-container .icon-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-container .icon-links img {
+    width: 15px;
+    height: 15px;
+}
+
+.nav-container .menu-toggle {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.nav-container .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.nav-container .mobile-menu ul {
+    list-style: none;
+}
+
+.nav-container .mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.nav-container .mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* @media (max-width: 768px) { */
+
+@media screen and (min-width: 250px) and (max-width: 768px) {
+    #header {
+        display: none;
+    }
+    .nav-container .mobile-menu ul li a {
+        font-size: 0.8rem;
+    }
+    .top-effect {
+        position: absolute;
+        top: -50px;
+        left: -200px;
+        width: 300px;
+        height: 200px;
+        z-index: -1;
+    }
+
+    /* hero */
+    .hero {
+        padding: 3.5rem 0 0;
+        width: 100%;
+    }
+
+    .hero .hero-img {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .hero .hero-title {
+        font-size: 2rem;
+        width: fit-content;
+        line-height: 2.5rem;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero .hero-text {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero .hero-button {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero .gradient-section {
+        top: 40%;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        border-radius: 50%;
+        background-color: rgba(253, 216, 0, 0.5);
+        z-index: -1;
+        box-shadow:
+            0 0 90px 80px rgba(255, 158, 0, 0.5),
+            0 0 90px 50px rgba(253, 216, 0, 0.3),
+            0 0 80px 50px rgba(255, 158, 0, 0.5);
+    }
+
+    .hero .connect {
+        display: none;
+    }
+
+    .hero .copyToClip {
+        width: 100%;
+        margin: 0rem auto 1rem;
+    }
+
+    /*--------------------------------------------------------------
+        # About Section
+    --------------------------------------------------------------*/
+
+    .about .about-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .about .about-content {
+        font-size: 0.75rem;
+        line-height: 1.3rem;
+        font-weight: 400;
+    }
+
+    /* tokenomics */
+    .tokenomics {
+        padding: 2rem 0 0;
+        overflow: hidden;
+    }
+
+    .tokenomics .section-subtitle {
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+
+    .tokenomics .image {
+        display: none;
+    }
+
+    .tokenomics .box-content {
+        margin: 1rem 0;
+        display: flex;
+        gap: 0;
+        width: 100%;
+    }
+
+    .tokenomics .box {
+        width: 8rem;
+        height: 5.5rem;
+    }
+
+    /* .tokenomics .image-mobile {
+        width: 100%;
+        overflow: hidden;
+    } */
+    /* .tokenomics .image-mobile img {
+        width: 100%;
+        height: 300px;
+    } */
+
+    .tokenomics .token-list {
+        margin-top: 1.5rem;
+    }
+
+    .tokenomics .token-list li {
+        font-size: 0.9rem;
+    }
+
+    .tokenomics .token-list span {
+        font-size: 0.9rem;
+    }
+
+    /* piechart */
+    .pie-chart {
+        padding-bottom: 1.5rem;
+        overflow: hidden;
+    }
+
+    .pie-chart .item {
+        height: 23.25rem;
+    }
+
+    .pie-chart p {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    .pie-chart h3 {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .pie-chart .col-2-item {
+        margin-top: 0.3rem;
+        /* height: 500px; */
+    }
+
+    .pie-chart .col-2-item img {
+        width: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+        margin-left: 0;
+        height: auto;
+    }
+
+    /* ecosystem */
+    .ecosystem {
+        overflow: hidden;
+    }
+
+    .ecosystem .eco-heading {
+        font-size: 1.3rem;
+    }
+
+    .ecosystem .sub-eco-title {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        text-align: center;
+    }
+
+    .ecosystem .item {
+        margin: 2.5rem 0 0;
+    }
+
+    .ecosystem .item-list li {
+        margin-bottom: 1.1rem;
+        font-size: 0.7rem;
+    }
+
+    .ecosystem .item-list span {
+        font-size: 0.7rem;
+    }
+
+    .ecosystem img {
+        width: 100%;
+        margin: auto;
+    }
+
+
+    /* RoadMap */
+    .roadmap {
+        padding: 2.5rem 0.5rem;
+        background-color: #4E9DA0;
+        overflow: hidden;
+    }
+
+    .roadmap .water {
+        top: 24%;
+    }
+
+    .roadmap .water img {
+        object-fit: fill;
+        height: 290px;
+    }
+
+    .roadmap .boat {
+        width: 100%;
+
+    }
+
+    .roadmap h2.header {
+        font-size: 3rem;
+        text-align: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #6AEB5E 00%, #FDD800 78%);
+    }
+
+    .roadmap h1 {
+        display: none;
+    }
+
+    .roadmap .item {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .roadmap .item .column {
+        width: 46.7%;
+        height: 11.9rem;
+        flex: 0 0 auto;
+        margin: 0 0 10px 10px;
+    }
+
+    .roadmap .background2 {
+        background-image: none;
+        background-color: #000000;
+    }
+
+    .roadmap .item .content h2 {
+        font-size: 0.6rem;
+        height: 23px;
+        margin: 0.8rem 0 0.5rem;
+    }
+
+    .roadmap .item .content ul li {
+        margin-bottom: 0.1rem;
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+
+    /* buytoken */
+    .buy-token {
+        padding: 3.17rem 0 0;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .buy-token h1 {
+        font-size: 1.75rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+    }
+
+    .buy-token .img-phone {
+        margin-right: 0;
+    }
+
+    .buy-token .item .content {
+        text-align: center;
+    }
+
+    .buy-token .item .title {
+        font-size: 0.7rem;
+    }
+
+    .buy-token .item .text {
+        font-size: 0.7rem;
+        line-height: 20px;
+    }
+
+    .buy-token .gradient {
+        display: none;
+    }
+
+    .buy-token .gradient-phone {
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        /* height: 100px; */
+        z-index: -1;
+        box-shadow:
+            0 0 20px 30px rgba(253, 216, 0, 0.8),
+            0 0 10px 30px rgba(255, 158, 0, 1),
+            0 0 0px 0px rgba(255, 158, 0, 1);
+
+    }
+
+    .buy-token .jupiter-iframe {
+        border: 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+
+    /* footer */
+
+    .footer {
+        padding: 1.6rem 0 0;
+        gap: 1.5rem;
+        overflow: hidden;
+    }
+
+    .footer ul li {
+        /* white-space: nowrap; */
+        padding: 0;
+        text-align: center;
+    }
+
+
+    .footer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer ul li a {
+        display: flex;
+        font-size: 13px;
+        padding: 6px 5px;
+        align-items: center;
+        text-transform: uppercase;
+       justify-content: center;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .nav-container {
+        display: none;
+    }
+
+    .tokenomics .image-mobile {
+        display: none;
+    }
+
+    .roadmap h2.header {
+        display: none;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #header {
+        display: none;
+    }
+
+    .nav-container {
+        height: 4.5rem;
+       
+    }
+
+    .nav-container .menu-toggle {
+        font-size: 45px;
+    }
+    .nav-container .icon-links img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-container .logo img {
+        width: 7rem;
+        height: 3.5rem;
+    }
+
+    .top-effect {
+        position: absolute;
+        top: -50px;
+        left: -200px;
+        width: 300px;
+        height: 200px;
+        z-index: -1;
+    }
+
+    /* hero */
+    .hero {
+        padding: 3.5rem 0 0;
+        width: 100%;
+    }
+
+    .hero .hero-img {
+        width: 75%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .hero .hero-title {
+        font-size: 3.5rem;
+        width: fit-content;
+        line-height: 3.7rem;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero .hero-text {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .hero .hero-button {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero .gradient-section {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        border-radius: 50%;
+        background-color: rgba(253, 216, 0, 0.5);
+        z-index: -1;
+        box-shadow:
+            0 0 190px 100px rgba(255, 158, 0, 0.5),
+            0 0 90px 70px rgba(253, 216, 0, 0.3),
+            0 0 80px 50px rgba(255, 158, 0, 0.5);
+    }
+
+    .hero .connect {
+        display: none;
+    }
+
+    .hero .copyToClip {
+        width: 100%;
+        margin: 0rem auto 1rem;
+    }
+
+    /*--------------------------------------------------------------
+        # About Section
+    --------------------------------------------------------------*/
+
+    .about .about-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .about .about-content {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        font-weight: 400;
+    }
+
+    /* tokenomics */
+    .tokenomics {
+        padding: 2rem 0 0;
+        overflow: hidden;
+    }
+
+    .tokenomics .section-subtitle {
+        font-weight: 800;
+        font-size: 2rem;
+    }
+
+    .tokenomics .image {
+        display: none;
+    }
+
+    .tokenomics .box-content {
+        margin: 1rem 0;
+        display: flex;
+        gap: 0;
+        width: 100%;
+    }
+
+    .tokenomics .box {
+        width: 13rem;
+        height: 10rem;
+    }
+
+
+    .tokenomics .token-list {
+        margin-top: 1.8rem;
+    }
+
+    .tokenomics .token-list li {
+        font-size: 1.5rem;
+    }
+
+    .tokenomics .token-list span {
+        font-size: 1.5rem;
+    }
+
+    /* piechart */
+    .pie-chart {
+        padding: 1.5rem 0;
+        overflow: hidden;
+    }
+
+    .pie-chart .item {
+        height: 23.25rem;
+    }
+
+    .pie-chart p {
+        font-size: 0.85rem;
+        line-height: 2rem;
+    }
+
+
+
+    .pie-chart h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .pie-chart .col-2-item {
+        margin-top: 0.3rem;
+        /* height: 500px; */
+    }
+
+    /* .pie-chart .col-2-item img {
+        width: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+        margin-left: 0;
+        height: auto;
+    } */
+
+    /* ecosystem */
+    .ecosystem {
+        overflow: hidden;
+    }
+
+    .ecosystem .eco-heading {
+        font-size: 2rem;
+    }
+
+    .ecosystem .sub-eco-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+
+    .ecosystem .item {
+        margin: 2.5rem 0 0;
+    }
+
+    .ecosystem .item-list li {
+        margin-bottom: 1.1rem;
+        font-size: 1.1rem;
+    }
+
+    .ecosystem .item-list span {
+        font-size: 1.1rem;
+    }
+
+    .ecosystem img {
+        width: 100%;
+        margin: auto;
+    }
+
+
+    /* RoadMap */
+    .roadmap {
+        padding: 2.5rem 1rem;
+        background-color: #4E9DA0;
+        overflow: hidden;
+    }
+
+    .roadmap .water {
+        top: 24%;
+    }
+
+    .roadmap .water img {
+        object-fit: fill;
+        height: 450px;
+    }
+
+    .roadmap .boat {
+        width: 80%;
+        margin: auto;
+    }
+
+    .roadmap h2.header {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #6AEB5E 00%, #FDD800 78%);
+    }
+
+    .roadmap h1 {
+        display: none;
+    }
+
+    .roadmap .item {
+        width: 100%;
+        margin-top: 3.5rem;
+    }
+
+    .roadmap .item .rows {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    .roadmap .item .column {
+        width: 32%;
+        height: 320px;
+        flex: 0 0 auto;
+        margin: 0 0 20px 10px;
+    }
+
+    .roadmap .background2 {
+        background-image: none;
+        background-color: #000000;
+    }
+
+    .roadmap .item .content h2 {
+        font-size: 1rem;
+        height: 65px;
+    }
+
+    .roadmap .item .content h3 {
+        font-size: 0.8rem;
+    }
+
+    .roadmap .item .content ul li {
+        margin-bottom: 0.1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    /* buytoken */
+    .buy-token {
+        padding: 3.17rem 0 0;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .buy-token h1 {
+        font-size: 2.75rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+    }
+
+    .buy-token .img-phone {
+        margin-right: 0;
+    }
+
+    .buy-token .item .content {
+        text-align: center;
+    }
+
+    .buy-token .item .title {
+        font-size: 1.2rem;
+    }
+
+    .buy-token .item .text {
+        font-size: 1.2rem;
+        line-height: 38px;
+    }
+
+    .buy-token .gradient {
+        display: none;
+    }
+
+    .buy-token .gradient-phone {
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        /* height: 100px; */
+        z-index: -1;
+        box-shadow:
+            0 0 20px 30px rgba(253, 216, 0, 0.8),
+            0 0 10px 30px rgba(255, 158, 0, 1),
+            0 0 0px 0px rgba(255, 158, 0, 1);
+
+    }
+
+    .buy-token .jupiter-iframe {
+        border: 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+
+    /* footer */
+
+    .footer {
+        padding: 1.6rem 0 0;
+        gap: 1.5rem;
+        overflow: hidden;
+    }
+
+    .footer ul li {
+        white-space: nowrap;
+        padding: 0;
+    }
+
+
+    .footer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer ul li a {
+        display: flex;
+        font-size: 18px;
+        padding: 6px 15px;
+        text-transform: uppercase;
+    }
+
+}
+
+/* Desktop (1024px - 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .hero .hero-title {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .hero .hero-img {
+        width: 75%;
+        margin-top: -2rem;
+    }
+
+    .gradient-section {
+        bottom: -20px;
+
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .roadmap .item h1 {
+        font-size: 3.8rem;
+
+    }
+
+    .ecosystem .item {
+        margin: 2rem 0 0;
+    }
+
+    .ecosystem .item-list li {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .ecosystem .item-list span {
+        font-size: 1rem;
+    }
+
+    .roadmap .item .column {
+        width: 30%;
+        height: 220px;
+    }
+
+    .roadmap .item .content ul li {
+        margin-bottom: 0.1rem;
+        font-size: 0.5rem;
+    }
+
+    .roadmap .boat {
+        width: 90%;
+    }
+
+    .roadmap .item {
+        width: 90%;
+        margin-top: 25px;
+    }
+
+    .roadmap .water {
+        bottom: -40px;
+    }
+    /* .buy-token .img-phone {
+        margin-right: -30%;
+    } */
+}
