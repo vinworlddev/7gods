@@ -689,10 +689,6 @@ video {
   cursor: text;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -870,6 +866,12 @@ video {
   outline-offset: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:block {
     display: block;
@@ -895,5 +897,15 @@ video {
 
   .md\:\!leading-6 {
     line-height: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 }
