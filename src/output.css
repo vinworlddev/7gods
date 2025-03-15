@@ -839,14 +839,6 @@ video {
   text-transform: capitalize;
 }
 
-.\!leading-5 {
-  line-height: 1.25rem !important;
-}
-
-.\!leading-6 {
-  line-height: 1.5rem !important;
-}
-
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -878,19 +870,13 @@ video {
   outline-offset: 2px;
 }
 
-@media (min-width: 640px) {
-  .sm\:items-center {
-    align-items: center;
-  }
-}
-
 @media (min-width: 768px) {
-  .md\:mt-4 {
-    margin-top: 1rem;
+  .md\:block {
+    display: block;
   }
 
-  .md\:items-center {
-    align-items: center;
+  .md\:hidden {
+    display: none;
   }
 
   .md\:text-lg {
